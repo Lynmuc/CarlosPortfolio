@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap');
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	text-decoration:none;
+	list-style:none;
+	font-family: "Oswald", sans-serif;
+}
+
+.background{
+
+}
+
+header{
+	display:flex;
+	justify-content: space-around;
+	max-width: 100%;
+	align-items:center;
+	text-align:center;
+	padding-top: 1rem;
+	
+}
+
+.nav-bar{
+	display:flex;
+	gap: 3rem;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.nav-list {
+	display: flex;
+	justify-content: space-around;
+
+}
+
+.nav-list ul{
+	display:flex;
+	gap: 3rem;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.nav-list a{
+	color: #FFA500;
+	font-size: 20px;
+}
+
+.nav-list a:hover{
+	color: #FF4500;
+	transition:0.3s all;
+}
+
+.logo{
+	height: 40px;
+	width: 40px;
+	background: transparent;
+	border: 1px solid;
+	color: #FF4500;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+button {
+	color:#FF4500;
+	background: transparent;
+	border: 1px solid #FF4500;
+	padding: 5px;
+	border-radius: 15px;
+	font-size: 17px;
+	width: 150px;
+	cursor:pointer;
+}
+
+button:hover {
+	color: white;
+	background: #FF4500;
+	transition: 0.4s;
+}
+
+.container-texto{
+	padding: 150px 0 0 130px;
+}
+
+.texto h3{
+	color: #FFA500;
+	font-size: 17px;
+}
+
+.texto h1{
+	color: #FFA500;
+	margin-top: 10px;
+}
+
+.texto span{
+	color: #FF4500;
+}
+
+.texto p{
+	color: #FFA500;
+	font-size:14px;
+	font-weight: 300px;
+	margin-top: 10px;
+}
+
+.redes-sociais a{
+	color: #FF4500;
+	padding: 15px;
+	margin-top: 15px;
+}
+
+.btn {
+	margin-top: 10px;
+}
