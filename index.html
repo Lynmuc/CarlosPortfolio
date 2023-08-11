@@ -1,59 +1,83 @@
-<!DOCTYPE HTML>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width-device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="IE-Edge" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-	<link rel="stylesheet" href="style.css">
-	<title> Portifólio </title>
-	
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- google icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- jquery -->
+    <script
+        src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+        crossorigin="anonymous">
+    </script>
+    <!-- css pessoal -->
+    <link rel="stylesheet" href="style.css">
+    <title>Landing Page</title>
 </head>
 <body>
-		<!-- background -->
-	<div class="background">
-		<header>
-			<nav class="nav-bar">
-					<!-- logo -->
-				<div class="logo">
-					<i class="fa-solid fa-c"></i>
-				</div>
-					<!-- cabeçalho de links -->
-				<div class="nav-list">
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Sobre</a></li>
-						<li><a href="#">Portfólios</a></li>
-						<li><a href="#">Projetos</a></li>
-						<button>Meu contato</buton>
-					</ul>
-				</div>
+    <nav class="menu-lateral">
+        <div class="btn-expandir">
+            <i class="bi bi-list"></i>
+        </div>
+        
+        <!--botao para expandir menu -->
 
-			</nav>
-		</header>
+        <ul>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-house"></i></span>
+                    <span class="txt-link">Home</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon">
+                        <i class="bi bi-columns-gap"></i>
+                    </span>
+                    <div>
+                        <span class="txt-link">Portifólios</span>
+                        <ul class="portfolio">
+                            <li class="portfolio-menu">Calendario</li>
+                            <li class="portfolio-menu">Calculadora</li>
+                            <li class="portfolio-menu">To-do List</li>
+                        </ul>
+                    </div>
+                </a>
+                
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-controller"></i></span>
+                    <div>
+                        <span class="txt-link">Jogos</span>
+                        <ul class="jogos">
+                            <li class="portfolio-menu">Jogo da Cobrinha</li>
+                            <li class="portfolio-menu">Ping Pong</li>
+                        </ul>
+                    </div>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-calendar3"></i></span>
+                    <span class="txt-link">Projetos</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-person-lines-fill"></i></span>
+                    <span class="txt-link">Contatos</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- menu lateral -->
 
-		<!-- corpo do texto -->
-		<div class="container-texto">
-				<div class="texto">
-					<h3>Bem-vindos ao meu portfólio</h3>
-					<h1>Eu sou o <span>Carlos Henrique</span></h1>
-					<p> Lorem Ipsum é simplesmente um texto experimental para aparecer
-						<br>enquanto não tenho nada melhor para digitar aqui.</p>
-							<!--redes sociais-->
-						<div class="redes-sociais">
-							<a href="#"><i class="fa-brands fa-facebook"></i></a> <!--facebook-->
-							<a href="#"><i class="fa-brands fa-instagram"></i></a> <!--Instagram-->
-							<a href="#"><i class="fa-brands fa-linkedin-in"></i></a> <!--linkedin-->
-							<a href="#"><i class="fa-brands fa-github"></i></a> <!--github-->
-						</div>
-						<button class="btn">Sobre MIM</button>
-				</div>
-		</div>
-	</div>
-
-	<div></div>
-	<div></div>
-	<div></div>
-
+    <script src="index.js"></script>
 </body>
 </html>
