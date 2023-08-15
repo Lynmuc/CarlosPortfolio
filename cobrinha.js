@@ -1,6 +1,13 @@
 const canvas = document.querySelector("canvas")
 const ctx = canvas.getContext("2d")
 
+const score = document.querySelector(".score--value")
+const finalScore = document.querySelector(".final-score > span")
+const menu = document.querySelector(".menu-screen")
+const buttonPlay = document.querySelector(".btn-play")
+
+// const audio = new audio("../assets/audio.mp3")
+
 const size = 30
 
 const snake = [ { x: 300, y: 270 } ]
@@ -9,7 +16,7 @@ const randomNumber = (min, max) => {
     return Math.round(Math.random() * (max - min) + min)
 }
 
-const randomposition = () => {
+const randomPosition = () => {
     const number = randomNumber(0, canvas.width - size)
     return Math.round(number / 30) * 30
 }
@@ -18,12 +25,14 @@ const randomColor = () => {
     const red = randomNumber(0, 255)
     const green = randomNumber(0, 255)
     const blue = randomNumber(0, 255)
+
+    return `rgb(${red}, ${green}, ${blue})`
 }
 
 const food = {
-    x: randomposition(0, 570),
-    y: randomposition(0, 570),
-    color: "orange"
+    x: randomPosition(0, 570),
+    y: randomPosition(0, 570),
+    color: randomColor()
 }
 
 let direction, loopId
@@ -93,6 +102,47 @@ const drawGrid = () => {
     }
 }
 
+const checkEat = () => {
+    const head = snake.at(-1)
+
+    if (head.x == food.x && head.y == food.y) {
+        snake.push(head)
+        //audio.play()
+
+        let x = randomPosition()
+        let y = randomPosition()
+
+        while(snake.find((position) => position.x == x && position.y == y)) {
+            x = randomPosition()
+            y = randomPosition()
+        }
+
+        food.x = x
+        food.y = y
+        food.color = randomColor()
+    }
+}
+
+const checkCollision = () => {
+    const head = snake.at(-1)
+    const canvasLimit = canvas.width
+    const neckIndex = snake.length - 2
+
+    const wallCollision = head.x < -30 || head.x > canvasLimit || head.y < -30 || head.y > canvasLimit
+
+    const selfCollision = snake.find((position, index) => {
+        return index < neckIndex && position.x == head.x && position.y == head.y
+    })
+
+    if (wallCollision || selfCollision) {
+        gameOver()
+    }
+}
+
+const gameOver = () => {
+    direction = undefined
+}
+
 const gameLoop = () => {
     clearInterval(loopId)
     ctx.clearRect(0, 0, 600, 600)
@@ -100,6 +150,8 @@ const gameLoop = () => {
     drawFood()
     drawSnake()
     moveSnake()
+    checkEat()
+    checkCollision()
 
     loopId = setTimeout(() => {
         gameLoop()
