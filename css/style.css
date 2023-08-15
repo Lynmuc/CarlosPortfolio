@@ -1,0 +1,101 @@
+/*fonte de letra do google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Nunito:wght@200;300;400;600;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'nunito', sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    background: #0b2136;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav.menu-lateral{
+    width: 80px;
+    height: 100%;
+    background-color:#25476a ;
+    padding: 40px 0 40px 1%;
+    box-shadow:5px 0 0 #5da45c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .3s ease;
+}
+
+nav.menu-lateral:hover{
+    width: 320px;
+
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i{
+    color: whitesmoke;
+    /***** color: #5da45c; *****/
+    font-size: 24px;
+    cursor: pointer;
+
+}
+
+ul{
+    height: 100%;
+    list-style: none;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.item-menu:hover{
+    background: #5da45c;
+}
+
+ul li.item-menu a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 30px;
+    line-height: 40px;
+
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 40px;
+}
+
+ul li.item-menu a .icon{
+    font-size: 30px;
+    margin-left: 3px;
+}
+
+.portfolio, .jogos{
+    display:none;
+    padding: 10px 0px 0 70px;
+}
+
+
+/* conteudo da pagina */
+
+h1{
+    display:flex;
+    justify-content: center;
+    margin-top: 100px;
+    color: rgb(221, 220, 220);
+    margin-bottom: 100px;
+}
+
+canvas {
+    background-color: #111;
+}
